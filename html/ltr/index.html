@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords"
+        content="wrappixel, admin dashboard, html css dashboard, web dashboard, bootstrap 5 admin, bootstrap 5, css3 dashboard, bootstrap 5 dashboard, Matrix lite admin bootstrap 5 dashboard, frontend, responsive bootstrap 5 admin template, Matrix admin lite design, Matrix admin lite dashboard bootstrap 5 dashboard template">
+    <meta name="description"
+        content="Matrix Admin Lite Free Version is powerful and clean admin dashboard template, inpired from Bootstrap Framework">
+    <meta name="robots" content="noindex,nofollow">
+    <title>Peta Marketer FAT Jakban</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <style>
+    * {box-sizing: border-box}
+    body {font-family: Verdana, sans-serif; margin:0}
+    .mySlides {display: none}
+    img {vertical-align: middle;}
+
+    /* Slideshow container */
+    .slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+    }
+
+    /* Next & previous buttons */
+    .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    }
+
+    /* Position the "next button" to the right */
+    .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+    }
+
+    /* On hover, add a black background color with a little bit see-through */
+    .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+    }
+
+    /* Caption text */
+    .text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+    }
+
+    /* Number text (1/3 etc) */
+    .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+    }
+
+    /* The dots/bullets/indicators */
+    .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+    }
+
+    .active, .dot:hover {
+    background-color: #717171;
+    }
+
+    /* Fading animation */
+    .fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+    }
+
+    @keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+    }
+
+    /* On smaller screens, decrease text size */
+    @media only screen and (max-width: 300px) {
+    .prev, .next,.text {font-size: 11px}
+    }
+    </style>
+    <style>
+    .button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    }
+
+    .button1 {
+    background-color: white; 
+    color: black; 
+    border: 2px solid #4CAF50;
+    }
+
+    .button1:hover {
+    background-color: #4CAF50;
+    color: white;
+    }
+
+    .button2 {
+    background-color: white; 
+    color: black; 
+    border: 2px solid #008CBA;
+    }
+
+    .button2:hover {
+    background-color: #008CBA;
+    color: white;
+    }
+
+    .button3 {
+    background-color: white; 
+    color: black; 
+    border: 2px solid #f44336;
+    }
+
+    .button3:hover {
+    background-color: #f44336;
+    color: white;
+    }
+
+    .button4 {
+    background-color: white;
+    color: black;
+    border: 2px solid #e7e7e7;
+    }
+
+    .button4:hover {background-color: #e7e7e7;}
+
+    .button5 {
+    background-color: white;
+    color: black;
+    border: 2px solid #555555;
+    }
+
+    .button5:hover {
+    background-color: #555555;
+    color: white;
+    }
+    </style>
+    <!-- Favicon icon -->
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/jpeg" sizes="16x16" href="../../assets/images/icon.png">
+    <!-- Custom CSS -->
+    <link href="../../assets/libs/flot/css/float-chart.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="../../dist/css/style.min.css" rel="stylesheet">
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+</head>
+
+<body>
+
+    <!-- ============================================================== -->
+    <!-- Preloader - style you can find in spinners.css -->
+    <!-- ============================================================== -->
+    <div class="preloader">
+        <div class="lds-ripple">
+            <div class="lds-pos"></div>
+            <div class="lds-pos"></div>
+        </div>
+    </div>
+    <!-- ============================================================== -->
+    <!-- Main wrapper - style you can find in pages.scss -->
+    <!-- ============================================================== -->
+    <div id="main-wrapper" data-layout="vertical" data-navbarbg="skin5" data-sidebartype="full"
+        data-sidebar-position="absolute" data-header-position="absolute" data-boxed-layout="full">
+        <!-- ============================================================== -->
+        <!-- Topbar header - style you can find in pages.scss -->
+        <!-- ============================================================== -->
+        <header class="topbar" data-navbarbg="skin5">
+            <nav class="navbar top-navbar navbar-expand-md navbar-dark">
+                <div class="navbar-header" data-logobg="skin5">
+                    
+                    <!-- ============================================================== -->
+                    <!-- Logo -->
+                    <!-- ============================================================== -->
+                    <a class="navbar-brand" href="index.html">
+                        <!-- Logo icon -->
+                        <b class="logo-icon ps-2">
+                            <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
+                            <!-- Dark Logo icon -->
+                            <img src="../../assets/images/www.jpeg" alt="homepage" class="light-logo" />
+
+                        </b>
+                        <!--End Logo icon -->
+                        <!-- Logo text -->
+                        <span class="logo-text">
+                            <!-- dark Logo text -->
+                            <img src="../../assets/images/sasa.png" alt="homepage" class="light-logo" />
+
+                        </span>
+                        <!-- Logo icon -->
+                        <!-- <b class="logo-icon"> -->
+                        <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
+                        <!-- Dark Logo icon -->
+                        <!-- <img src="../../assets/images/logo-text.png" alt="homepage" class="light-logo" /> -->
+
+                        <!-- </b> -->
+                        <!--End Logo icon -->
+                    </a>
+                    <!-- ============================================================== -->
+                    <!-- End Logo -->
+                    <!-- ============================================================== -->
+                    <!-- ============================================================== -->
+                    <!-- Toggle which is visible on mobile only -->
+                    <!-- ============================================================== -->
+                    <a class="nav-toggler waves-effect waves-light d-block d-md-none" href="javascript:void(0)"><i
+                            class="ti-menu ti-close"></i></a>
+                </div>
+                <!-- ============================================================== -->
+                <!-- End Logo -->
+                <!-- ============================================================== -->
+                <div class="navbar-collapse collapse" id="navbarSupportedContent" data-navbarbg="skin5">
+                    <!-- ============================================================== -->
+                    <!-- toggle and nav items -->
+                    <!-- ============================================================== -->
+                    <ul class="navbar-nav float-start me-auto">
+                        <li class="nav-item d-none d-lg-block"><a
+                                class="nav-link sidebartoggler waves-effect waves-light" href="javascript:void(0)"
+                                data-sidebartype="mini-sidebar"><i class="mdi mdi-menu font-24"></i></a></li>
+                        <!-- ============================================================== -->
+                        <!-- create new -->
+                        <!-- ============================================================== -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <span class="d-none d-md-block"> Silakan Di buka Via Google Chrome</span>
+                                <span class="d-block d-md-none"><i class="fa fa-plus"></i></span>
+                            </a>
+                            
+                        </li>
+                        <!-- ============================================================== -->
+                        <!-- Search -->
+                        <!-- ============================================================== -->
+                        
+                    </ul> 
+                    <!-- ============================================================== -->
+                    <!-- Right side toggle and nav items -->
+                    <!-- ============================================================== -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark pro-pic" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <span>Pengaduan FAT</span>
+                            <img src="../../assets/images/users/1.jpg" alt="user" class="rounded-circle" width="31">
+                        </a>
+                    </li>
+                </div>
+            </nav>
+        </header>
+        <!-- ============================================================== -->
+        <!-- End Topbar header -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- Left Sidebar - style you can find in sidebar.scss  -->
+        <!-- ============================================================== -->
+        <aside class="left-sidebar" data-sidebarbg="skin5">
+            <!-- Sidebar scroll-->
+            <div class="scroll-sidebar">
+                <!-- Sidebar navigation-->
+                <nav class="sidebar-nav">
+                    <ul id="sidebarnav" class="pt-4">
+                        <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
+                                href="index.html" aria-expanded="false"><i class="mdi mdi-view-dashboard"></i><span
+                                    class="hide-menu">Dashboard</span></a></li>
+                        
+                        <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark"
+                                href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-chart-bubble"></i><span
+                                    class="hide-menu">Marketer Jakarta </span></a>
+                            <ul aria-expanded="false" class="collapse  first-level">
+                                <li class="sidebar-item"><a href="https://www.google.com/maps/d/u/0/viewer?mid=1dMu9pTQ_31GkvBAY8W5XVc1eBTHClBY&ll=-6.269890256057885%2C106.78535316481296&z=11" class="sidebar-link"><i
+                                            class="mdi mdi-emoticon"></i><span class="hide-menu"> Jakbar & Jakpus
+                                        </span></a></li>
+                                <li class="sidebar-item"><a href="https://www.google.com/maps/d/u/0/viewer?mid=19tTQVlIWl12-uKzvlRaVTK6oo7-16TA&ll=-6.253625474847325%2C106.82099349999999&z=11" class="sidebar-link"><i
+                                            class="mdi mdi-emoticon-cool"></i><span class="hide-menu"> Jaktim & Jaksel
+                                             </span></a></li>
+                                <li class="sidebar-item"><a href="https://www.google.com/maps/d/u/0/viewer?mid=1WBxhBM-crEvTv4Oe-xbg4iEORdLhjUc&ll=-6.171529264135513%2C106.78494909999999&z=12" class="sidebar-link"><i
+                                            class="mdi mdi-message-outline"></i><span class="hide-menu"> Jakarta Utara
+                                        </span></a></li>
+                            </ul>
+                        </li>
+
+                        <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark"
+                                href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-google-circles-extended"></i><span
+                                    class="hide-menu">Marketer Banten </span></a>
+                            <ul aria-expanded="false" class="collapse  first-level">
+                                <li class="sidebar-item"><a href="https://www.google.com/maps/d/u/0/viewer?mid=1bCjZuAUCmIpU7GUmaxDCSpDSMk-ddak&ll=-6.220036815400188%2C106.57515276213952&z=11" class="sidebar-link"><i
+                                            class="mdi mdi-note-outline"></i><span class="hide-menu">Tangerang
+                                        </span></a></li>
+                                <li class="sidebar-item"><a href="https://www.google.com/maps/d/u/0/viewer?mid=1N2bZ0NebjHUjrUc-Hz6u3sXAyWT2BeY&ll=-6.080867715048331%2C106.14139499999997&z=11" class="sidebar-link"><i
+                                            class="mdi mdi-note-plus"></i><span class="hide-menu"> Serang Cilegon
+                                        </span></a></li>
+                                <li class="sidebar-item"><a href="https://www.google.com/maps/d/u/0/viewer?mid=1JLLA90qZSuprnsggkkB3IQzJOsAeM8M&ll=-6.6092905937335065%2C106.05324500000002&z=10" class="sidebar-link"><i
+                                            class="mdi mdi-bulletin-board"></i><span class="hide-menu"> Lebak Pandeglang Rangkas
+                                        </span></a></li>
+                            </ul>
+                        </li>
+                        
+                        
+                        
+                        <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark"
+                                href="javascript:void(0)" aria-expanded="false"><i
+                                    class="mdi mdi-source-commit-next-local"></i><span class="hide-menu">Marketer BODEBEK </span></a>
+                            <ul aria-expanded="false" class="collapse  first-level">
+                                <li class="sidebar-item"><a href="https://www.google.com/maps/d/u/0/viewer?mid=13H7r1DjXTJz02ykLY_OXBh4d4bTozo0&ll=-6.407344704420462%2C106.8318905&z=10" class="sidebar-link"><i
+                                            class="mdi mdi-view-dashboard"></i><span class="hide-menu"> Bogor
+                                        </span></a></li>
+                                <li class="sidebar-item"><a href="https://www.google.com/maps/d/u/0/viewer?mid=1wGjYu8oklDdqki0At9TTX9n7TZ23Hys&ll=-6.38571378087231%2C106.81738531518549&z=12" class="sidebar-link"><i
+                                            class="mdi mdi-multiplication-box"></i><span class="hide-menu"> Depok
+                                        </span></a></li>
+                                <li class="sidebar-item"><a href="https://www.google.com/maps/d/u/0/viewer?mid=1Db_CP093Eb4znO3C1VlWpS7h0k3qRYo&ll=-6.363184351475622%2C107.02821545865548&z=15" class="sidebar-link"><i
+                                            class="mdi mdi-calendar-check"></i><span class="hide-menu"> Bekasi
+                                        </span></a></li>
+                                
+                                
+                            </ul>
+                        </li>
+                        
+                        <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
+                                href="https://api.whatsapp.com/send/?phone=6285179808037&text&type=phone_number&app_absent=0" aria-expanded="false"><i class="mdi mdi-pencil"></i><span
+                                    class="hide-menu">Pengaduan FAT</span></a></li>
+                    </ul>
+                    
+                </nav>
+                <!-- End Sidebar navigation -->
+            </div>
+            <!-- End Sidebar scroll-->
+        </aside>
+        <!-- ============================================================== -->
+        <!-- End Left Sidebar - style you can find in sidebar.scss  -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- Page wrapper  -->
+        <!-- ============================================================== -->
+        <div class="page-wrapper">
+
+            <!-- ============================================================== -->
+            <!-- End Bread crumb and right sidebar toggle -->
+            <!-- ============================================================== -->
+            <!-- ============================================================== -->
+            <!-- Container fluid  -->
+            <!-- ============================================================== -->
+            
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="d-md-flex align-items-center">
+                                    <div>
+                                        <h4 class="card-title">FAT Marketer Jakban</h4>
+                                        <h5 class="card-subtitle">Marketer Berdasarkan Kota</h5>
+                                    </div>
+                                </div>
+                <div class="row" align="center">
+                    <!-- Column -->
+                    <div class="col-3">
+                        <div>
+                            <div><a href="https://www.google.com/maps/d/u/0/viewer?mid=1dMu9pTQ_31GkvBAY8W5XVc1eBTHClBY&ll=-6.269890256057885%2C106.78535316481296&z=11" class="sidebar-link"><img src="../../assets/images/icon.png" alt="user" width="80" 
+                                    class="rounded-circle"></a>
+                                    <h5 class="card-title">Jakarta Pusat</h5>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <!-- Column -->
+                    <div class="col-3">
+                        <div>
+                            <div><img src="../../assets/images/icon.png" alt="user" width="80"
+                                    class="rounded-circle">
+                                    <h5 class="card-title">Jakarta Timur</h5>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <!-- Column -->
+                    <div class="col-3">
+                        <div>
+                            <div><img src="../../assets/images/icon.png" alt="user" width="80"
+                                    class="rounded-circle">
+                                    <h5 class="card-title">Jakarta Barat</h5>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <br/><br/><br/><br/><br/><br/>
+                        <div class="col-3">
+                            <div>
+                                <div><img src="../../assets/images/icon.png" alt="user" width="80"
+                                        class="rounded-circle">
+                                        <h5 class="card-title">Jakarta Utara</h5>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    <!-- Column -->
+                    <div class="col-3">
+                        <div>
+                            <div><img src="../../assets/images/icon.png" alt="user" width="80"
+                                    class="rounded-circle">
+                                    <h5 class="card-title">Jakarta Selatan</h5>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <!-- Column -->
+                    <div class="col-3">
+                        <div>
+                            <div><img src="../../assets/images/icon.png" alt="user" width="80"
+                                    class="rounded-circle">
+                                    <h5 class="card-title">Bogor</h5>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <br/><br/><br/><br/><br/><br/>
+                    <div class="col-3">
+                        <div>
+                            <div><img src="../../assets/images/icon.png" alt="user" width="80"
+                                    class="rounded-circle">
+                                    <h5 class="card-title">Depok</h5>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div>
+                            <div><img src="../../assets/images/icon.png" alt="user" width="80"
+                                    class="rounded-circle">
+                                    <h5 class="card-title">Bekasi</h5>
+                            </div>
+                            
+                        </div>
+                    </div>
+                        <div class="col-3">
+                            <div>
+                                <div><img src="../../assets/images/icon.png" alt="user" width="80"
+                                        class="rounded-circle">
+                                        <h5 class="card-title">Tangerang</h5>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    <!-- Column -->
+                    <div class="col-3">
+                        <div>
+                            <div><img src="../../assets/images/icon.png" alt="user" width="80"
+                                    class="rounded-circle">
+                                    <h5 class="card-title">Serang & Cilegon</h5>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <!-- Column -->
+                    <div class="col-3">
+                        <div>
+                            <div><img src="../../assets/images/icon.png" alt="user" width="80"
+                                    class="rounded-circle">
+                                    <h5 class="card-title">Lebak & Pandeglang</h5>
+                            </div>
+                            
+                        </div>
+                    </div>
+
+                    <div class="col-3">
+                        <div>
+                            <div><img src="../../assets/images/icon.png" alt="user" width="80"
+                                    class="rounded-circle">
+                                    <h5 class="card-title">Rangkasbitung</h5>
+                            </div>
+                            
+                        </div>
+                    </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                
+            
+                    <!-- Menu Symbol -->
+                    
+                
+                <!-- ============================================================== -->
+                <!-- Sales Cards  -->
+                <!-- ============================================================== -->
+                <!-- ============================================================== -->
+                <!-- Sales chart -->
+                <!-- ============================================================== -->
+                
+                <!-- ============================================================== -->
+                <!-- Sales chart -->
+                <!-- ============================================================== -->
+                <!-- ============================================================== -->
+                <!-- Recent comment and chats -->
+                <!-- ============================================================== -->
+                <div class="row">
+                    <div id="carouselExampleCaptions" class="carousel slide">
+                        <div class="carousel-indicators">
+                          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="" aria-label="Slide 1"></button>
+                          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2" class=""></button>
+                          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3" class="active" aria-current="true"></button>
+                        </div>
+                        <div class="carousel-inner">
+                            <div class="carousel-item">
+                                <img src="../../assets/images/12.png" style="width:100%">
+                              <div class="carousel-caption d-none d-md-block">
+                                <h5>First slide label</h5>
+                                <p>Some representative placeholder content for the first slide.</p>
+                              </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="../../assets/images/13.png" style="width:100%">
+                              <div class="carousel-caption d-none d-md-block">
+                                <h5>Second slide label</h5>
+                                <p>Some representative placeholder content for the second slide.</p>
+                              </div>
+                            </div>
+                            <div class="carousel-item active">
+                              <img src="../../assets/images/15.png" style="width:100%">
+                              <div class="carousel-caption d-none d-md-block">
+                                <h5>Third slide label</h5>
+                                <p>Some representative placeholder content for the third slide.</p>
+                              </div>
+                            </div>
+                          </div>
+                          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                          </button>
+                          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                          </button>
+                      </div>
+                    <!-- column 
+                    <div class="slideshow-container">
+
+                        <div class="mySlides fade">
+                        <div class="numbertext">1 / 3</div>
+                        <img src="../../assets/images/img_nature_wide.jpg" style="width:100%">
+                        <div class="text">Caption Text</div>
+                        </div>
+    
+                        <div class="mySlides fade">
+                        <div class="numbertext">2 / 3</div>
+                        <img src="../../assets/images/img_snow_wide.jpg" style="width:100%">
+                        <div class="text">Caption Two</div>
+                        </div>
+    
+                        <div class="mySlides fade">
+                        <div class="numbertext">3 / 3</div>
+                        <img src="../../assets/images/img_mountains_wide.jpg" style="width:100%">
+                        <div class="text">Caption Three</div>
+                        </div>
+                        <a class="prev" onclick="plusSlides(-1)">❮</a>
+                        <a class="next" onclick="plusSlides(1)">❯</a>
+    
+                        </div>
+                        <br>
+    
+                        <div style="text-align:center">
+                        <span class="dot" onclick="currentSlide(1)"></span> 
+                        <span class="dot" onclick="currentSlide(2)"></span> 
+                        <span class="dot" onclick="currentSlide(3)"></span> 
+                        </div>
+    
+                            <script>
+                            let slideIndex = 1;
+                            showSlides(slideIndex);
+    
+                            function plusSlides(n) {
+                            showSlides(slideIndex += n);
+                            }
+    
+                            function currentSlide(n) {
+                            showSlides(slideIndex = n);
+                            }
+    
+                            function showSlides(n) {
+                            let i;
+                            let slides = document.getElementsByClassName("mySlides");
+                            let dots = document.getElementsByClassName("dot");
+                            if (n > slides.length) {slideIndex = 1}    
+                            if (n < 1) {slideIndex = slides.length}
+                            for (i = 0; i < slides.length; i++) {
+                                slides[i].style.display = "none";  
+                            }
+                            for (i = 0; i < dots.length; i++) {
+                                dots[i].className = dots[i].className.replace(" active", "");
+                            }
+                            slides[slideIndex-1].style.display = "block";  
+                            dots[slideIndex-1].className += " active";
+                            }
+                            </script>
+                        </div>-->
+                    <!-- column -->
+
+                    
+                </div>
+                <!-- ============================================================== -->
+                <!-- Recent comment and chats -->
+                <!-- ============================================================== -->
+            </div>
+            <!-- ============================================================== -->
+            <!-- End Container fluid  -->
+            <!-- ============================================================== -->
+            <!-- ============================================================== -->
+            <!-- footer -->
+            <!-- ============================================================== -->
+            <footer class="footer text-center">
+                All Rights Reserved by ICONNET. Designed and Developed by <a
+                    href="https://www.wrappixel.com">Hamba Allah</a>.
+            </footer>
+            <!-- ============================================================== -->
+            <!-- End footer -->
+            <!-- ============================================================== -->
+        </div>
+        <!-- ============================================================== -->
+        <!-- End Page wrapper  -->
+        <!-- ============================================================== -->
+    </div>
+    <!-- ============================================================== -->
+    <!-- End Wrapper -->
+    <!-- ============================================================== -->
+    <!-- ============================================================== -->
+    <!-- All Jquery -->
+    <!-- ============================================================== -->
+    <script src="../../assets/libs/jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap tether Core JavaScript -->
+    <script src="../../assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/libs/perfect-scrollbar/dist/perfect-scrollbar.jquery.min.js"></script>
+    <script src="../../assets/extra-libs/sparkline/sparkline.js"></script>
+    <!--Wave Effects -->
+    <script src="../../dist/js/waves.js"></script>
+    <!--Menu sidebar -->
+    <script src="../../dist/js/sidebarmenu.js"></script>
+    <!--Custom JavaScript -->
+    <script src="../../dist/js/custom.min.js"></script>
+    <!--This page JavaScript -->
+    <!-- <script src="../../dist/js/pages/dashboards/dashboard1.js"></script> -->
+    <!-- Charts js Files -->
+    <script src="../../assets/libs/flot/excanvas.js"></script>
+    <script src="../../assets/libs/flot/jquery.flot.js"></script>
+    <script src="../../assets/libs/flot/jquery.flot.pie.js"></script>
+    <script src="../../assets/libs/flot/jquery.flot.time.js"></script>
+    <script src="../../assets/libs/flot/jquery.flot.stack.js"></script>
+    <script src="../../assets/libs/flot/jquery.flot.crosshair.js"></script>
+    <script src="../../assets/libs/flot.tooltip/js/jquery.flot.tooltip.min.js"></script>
+    <script src="../../dist/js/pages/chart/chart-page-init.js"></script>
+
+</body>
+
+</html>
